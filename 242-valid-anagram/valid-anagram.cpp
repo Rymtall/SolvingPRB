@@ -9,9 +9,15 @@ public:
             count[ch-'a']--;
         }
 
-        bool ans = all_of(begin(count),end(count),[](int ele){
-            return ele == 0;
-        });
-        return ans;
+        // bool ans = all_of(begin(count),end(count),[](int ele){
+        //     return ele == 0;
+        // });
+        // return ans;
+        for(auto it :count){
+            if(it != 0){
+                return false;;
+            }
+        }
+        return true;
     }
 };
