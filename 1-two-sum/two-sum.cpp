@@ -6,7 +6,7 @@ public:
         for(int i=0;i<n;i++){
             int rem = target-nums[i];
 
-            if(mp.find(rem) != mp.end()){
+            if(mp.count(rem)){
                 return{mp[rem],i};
             }
             mp[nums[i]]=i;
